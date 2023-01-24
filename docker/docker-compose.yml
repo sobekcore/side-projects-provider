@@ -1,0 +1,30 @@
+version: '3.7'
+
+services:
+  server:
+    build: server
+    image: server
+    container_name: server
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt
+    ports:
+      - "80:80"
+      - "443:443"
+
+  node-app-1:
+    build: ../apps/node-app-1
+    image: node-app-1
+    container_name: node-app-1
+    ports:
+      - "8080:8080"
+    depends_on:
+      - server
+
+  node-app-2:
+    build: ../apps/node-app-2
+    image: node-app-2
+    container_name: node-app-2
+    ports:
+      - "8081:8080"
+    depends_on:
+      - server

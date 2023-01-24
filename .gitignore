@@ -1,0 +1,6 @@
+# Ignore everything but .gitkeep inside apps
+apps/**/*
+!apps/.gitkeep
+
+# Editor configuration
+.idea
