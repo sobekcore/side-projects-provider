@@ -2,5 +2,10 @@
 apps/**/*
 !apps/.gitkeep
 
+# Ignore Docker configuration overrides
+docker-compose.override.yml
+docker/server/override/**/*
+!docker/server/override/.gitkeep
+
 # Editor configuration
 .idea
