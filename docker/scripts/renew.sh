@@ -22,4 +22,4 @@ docker run --rm \
     --dns-route53-propagation-seconds 30
 
 cd "${HOME}/side-projects-provider/docker"
-docker-compose restart server
+docker compose restart server
