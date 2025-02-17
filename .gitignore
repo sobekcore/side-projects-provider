@@ -2,10 +2,17 @@
 apps/**/*
 !apps/.gitkeep
 
+# Ignore everything but .gitkeep inside docker/scripts/additional
+docker/scripts/additional/**/*
+!docker/scripts/additional/.gitkeep
+
 # Ignore Docker configuration overrides
 docker-compose.override.yml
 docker/server/override/**/*
 !docker/server/override/.gitkeep
+
+# Ignore Makefile example copy
+Makefile
 
 # Editor configuration
 .idea

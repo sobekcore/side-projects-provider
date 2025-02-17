@@ -1,9 +1,8 @@
-version: "3.8"
-
 services:
   server:
     build: server
     image: server
+    pull_policy: never
     container_name: server
     volumes:
       - /etc/letsencrypt:/etc/letsencrypt
@@ -14,6 +13,7 @@ services:
   node-app-1:
     build: ../apps/node-app-1
     image: node-app-1
+    pull_policy: never
     container_name: node-app-1
     ports:
       - "8080:8080"
@@ -23,6 +23,7 @@ services:
   node-app-2:
     build: ../apps/node-app-2
     image: node-app-2
+    pull_policy: never
     container_name: node-app-2
     ports:
       - "8081:8080"

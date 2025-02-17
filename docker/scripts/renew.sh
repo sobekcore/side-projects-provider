@@ -18,8 +18,7 @@ docker run --rm \
     certonly \
     -d *.sobekcore.com \
     --force-renew \
-    --dns-route53 \
-    --dns-route53-propagation-seconds 30
+    --dns-route53
 
 cd "${HOME}/side-projects-provider/docker"
 docker compose restart server

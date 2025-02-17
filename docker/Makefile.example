@@ -1,0 +1,15 @@
+start:
+	docker compose up -d
+	cd ../apps/node-app-1 && docker compose up -d
+	cd ../apps/node-app-2 && docker compose up -d
+
+stop:
+	docker compose stop
+	cd ../apps/node-app-1 && docker compose stop
+	cd ../apps/node-app-2 && docker compose stop
+
+generate:
+	./scripts/generate.sh
+
+renew:
+	./scripts/renew.sh
