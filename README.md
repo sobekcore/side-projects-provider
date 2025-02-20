@@ -3,6 +3,11 @@ This repository contains many different infrastructure components to support hos
 
 Every command in this guide assumes that the repository will be cloned into `~/side-projects-provider`, and that the commands will be launched from `~/side-projects-provider/docker`.
 
+## Prerequisites
+1. Create memory swapfile (https://repost.aws/knowledge-center/ec2-memory-swap-file).
+2. Add `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables to `~/.bash_profile`.
+3. Run `chmod +x` on all scripts.
+
 ## Deployment
 If all the services are described directly in `docker-compose.override.yml`, then the simple deployment process can be successfully conducted with:
 ```shell
